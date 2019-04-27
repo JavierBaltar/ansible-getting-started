@@ -11,11 +11,12 @@
 
 
 ## Inventory
-
+Intentory file location
+`$ /etc/ansible/hosts`
 
 ## Useful Commands
 
-zeep
+
 
 `$ python --version`
 
