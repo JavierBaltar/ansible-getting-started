@@ -57,10 +57,10 @@ cisco-nxos-devices
 
 
 ## Useful Commands
+###List group nodes
 
 
-
-`$ python --version`
+`# ansible group-name --list-hosts`
 
 
 
