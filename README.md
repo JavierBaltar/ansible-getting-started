@@ -54,10 +54,21 @@ cisco-ios-devices
 cisco-nxos-devices
 ```
 
+### Patterns
 
+```yaml
+[cisco-nexus-7000]
+nexus[01:04].companydomain.com
+```
+
+`nexus01.companydomain.com
+nexus02.companydomain.com
+nexus03.companydomain.com
+nexus04.companydomain.com
+`
 
 ## Useful Commands
-###List group nodes
+### List group nodes
 
 
 `# ansible group-name --list-hosts`
