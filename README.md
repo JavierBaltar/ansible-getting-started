@@ -14,7 +14,7 @@
 Intentory file location
 `$ /etc/ansible/hosts`
 
-###Format
+### Format
 
 ```yaml
 [cisco-ios-devices]
