@@ -133,7 +133,31 @@ Intentory file location
 
 ```
 
+#### Copy
 
+```yaml
+- name: Copy File
+  hosts: webserver
+  tasks:
+   - copy:
+      src: /var/log/application01/filename
+      dest: "/var/backups/filename
+      owner: root
+      group: root
+      mode: u=r,g=r,o=
+
+```
+
+#### Fetch
+
+```yaml
+- name: Copy File from Remote Node
+  hosts: webserver
+  tasks:
+   - fetch:
+      src: /var/log/application01/filename
+      dest: "/var/backups/
+```
 
 ## Related
 
