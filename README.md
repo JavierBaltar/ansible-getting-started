@@ -67,6 +67,29 @@ nexus03.companydomain.com
 nexus04.companydomain.com
 `
 
+## Playbooks
+Intentory file location
+`$ /etc/ansible/hosts`
+
+### Handlers
+
+```yaml
+---
+- hosts: webservers
+
+  tasks: 
+    - name: Install Nginx
+      apt: pkg=nginx state=installed update_cache=true
+      notify:
+        - Start Nginx
+
+  handlers:
+    - name: Start Nginx
+      service: name=nginx state=started
+
+```
+
+
 ## Useful Commands
 ### List group nodes
 
