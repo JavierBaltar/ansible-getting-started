@@ -26,6 +26,36 @@ Intentory file location
 10.10.20.2
 ```
 
+### Variables
+
+```yaml
+[cisco-ios-devices]
+10.10.0.1
+10.10.0.2
+
+[cisco-ios-devices:vars]
+ansible_port=22
+ansible_user=netadmin
+```
+
+### Grouping
+
+```yaml
+[cisco-ios-devices]
+10.10.0.1
+10.10.0.2
+
+[cisco-nxos-devices]
+10.10.20.1
+10.10.20.2
+
+[network-devices:children]
+cisco-ios-devices
+cisco-nxos-devices
+```
+
+
+
 ## Useful Commands
 
 
