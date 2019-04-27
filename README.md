@@ -91,7 +91,13 @@ Intentory file location
 
 ## Roles
 
+## Templates
 
+
+## Loops
+### With_items
+
+### With_nested
 
 ## Useful Commands
 ### List group nodes
@@ -112,34 +118,13 @@ Intentory file location
 - A Coffee mug 
 
 ## Modules
-#### Export to CSV 
+### Files
 
 ```yaml
-import csv
- 
-callmanagerdata = [["customer", "version"],
-          ['CustomerA', '10.5'],
-          ['CustomerB', '11.5']]
- 
-File = open('callmanager-data.csv', 'w')
-with File:
-    writer = csv.writer(File)
-    writer.writerows(callmanagerdata)
-     
-print("Writing complete!")
+
 ```
 
-#### Export to SQLite
 
-```python
-import sqlite3
-con_obj = sqlite3.connect("callmanager-data.db")
-with con_obj:
-            cur_obj = con_obj.cursor()
-            cur_obj.execute("""CREATE TABLE cucm_version(customer text, version text)""")
-
-print ("Table created!")
-```
 
 ## Related
 
