@@ -123,10 +123,12 @@ Intentory file location
 #### Archive
 
 ```yaml
-- name: Backup Directory 
-      apt: pkg=nginx state=installed update_cache=true
-      notify:
-        - Start Nginx
+- name: Backup Directory /var/log/application01/
+  hosts: webservers
+  tasks:
+   - archive:
+      path: /var/log/application01/
+      dest: "/var/backups/application01-{{ ansible_date_time.date }}.tgz"
 
 ```
 
