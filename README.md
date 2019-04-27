@@ -1,10 +1,11 @@
 # ansible-getting-started
 
 <p align="center">
-  <a href="#Getting-Started">Getting Started</a> •
-  <a href="#Prerequisites">Prerequisites</a> •
-  <a href="#Installing">Installing</a> •
-  <a href="#Next-Steps">Next Steps</a> •
+  <a href="#Inventory">Inventory</a> •
+  <a href="#Playbooks">Playbooks</a> •
+  <a href="#Roles">Roles</a> •
+  <a href="#Loops">Loops</a> •
+  <a href="#Modules">Modules</a> •
   <a href="#related">Related</a> •
   <a href="#license">License</a>
 </p>
