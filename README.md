@@ -120,7 +120,13 @@ Intentory file location
 ## Modules
 ### Files
 
+#### Archive
+
 ```yaml
+- name: Backup Directory 
+      apt: pkg=nginx state=installed update_cache=true
+      notify:
+        - Start Nginx
 
 ```
 
