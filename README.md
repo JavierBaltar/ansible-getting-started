@@ -107,17 +107,6 @@ Intentory file location
 `# ansible group-name --list-hosts`
 
 
-
-![](ciscoDevnetSandboxes.gif)
-
-#### Toolkit
-
-- Python. I am using Python 2 and PyCharm IDE.
-- A CUCM instance
-- AXLSQLToolkit 
-- zeep
-- A Coffee mug 
-
 ## Modules
 ### Files
 
