@@ -161,8 +161,7 @@ Intentory file location
 
 ## Related
 
-* [Cisco Administrative XML (AXL)](https://developer.cisco.com/site/axl/) - AXL is a Soap based API that enables remote provisioning of Unified CM
-
+* [Ansible Modules](https://docs.ansible.com/ansible/latest/modules/modules_by_category.html) - List of Ansible modules
  
 
 ## Authors
