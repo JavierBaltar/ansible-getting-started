@@ -151,20 +151,30 @@ Intentory file location
 ### Notifications
 
 #### Slack
+```yaml
+- name: Sending message to Slack Channel
+    slack:
+      token: '{{ slack_token }}'
+      channel: "#companynameAnsible"
+      domain: "companyname.slack.com"
+      parse: "full"
+      color: "good"
+      msg: 'The changes is completed on {{ inventory_hostname }}.'
+ ```
 
 #### Twilio
 
 ```yaml
-# Send an SMS to multiple phone numbers when the change is completed
-- twilio:
-    msg: The configuration change is completed!
-    account_sid: XXXXXXXXXXX
-    auth_token: XXXXXXXXXXX
-    from_number: +34XXXXXXXXX
-    to_number:
-      - +34XXXXXXXX1
-      - +34XXXXXXXX2
-  delegate_to: localhost
+- name: Send an SMS to multiple phone numbers when the change is completed
+    twilio:
+      msg: The configuration change is completed!
+      account_sid: XXXXXXXXXXX
+      auth_token: XXXXXXXXXXX
+      from_number: +34XXXXXXXXX
+      to_number:
+        - +34XXXXXXXX1
+        - +34XXXXXXXX2
+    delegate_to: localhost
 ```
 
 ## Related
