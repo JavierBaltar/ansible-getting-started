@@ -4,6 +4,7 @@
   <a href="#Inventory">Inventory</a> •
   <a href="#Playbooks">Playbooks</a> •
   <a href="#Roles">Roles</a> •
+  <a href="#Templates">Roles</a> •
   <a href="#Loops">Loops</a> •
   <a href="#Modules">Modules</a> •
   <a href="#related">Related</a> •
