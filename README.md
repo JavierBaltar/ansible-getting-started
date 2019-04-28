@@ -7,7 +7,8 @@
   <a href="#Templates">Roles</a> •
   <a href="#Loops">Loops</a> •
   <a href="#Modules">Modules</a> •
-  <a href="#related">Related</a> 
+  <a href="#related">Related</a> •
+  <a href="#Authors">Authors</a>
 </p>
 
 
