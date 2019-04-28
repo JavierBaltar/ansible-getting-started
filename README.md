@@ -7,13 +7,13 @@
   <a href="#Templates">Roles</a> •
   <a href="#Loops">Loops</a> •
   <a href="#Modules">Modules</a> •
-  <a href="#related">Related</a> •
-  <a href="#license">License</a>
+  <a href="#related">Related</a> 
 </p>
 
 
 ## Inventory
 Intentory file location
+
 `$ /etc/ansible/hosts`
 
 ### Format
@@ -62,16 +62,16 @@ cisco-nxos-devices
 [cisco-nexus-7000]
 nexus[01:04].companydomain.com
 ```
+Generates the output below
 
-`nexus01.companydomain.com
+```yaml 
+nexus01.companydomain.com
 nexus02.companydomain.com
 nexus03.companydomain.com
 nexus04.companydomain.com
-`
+```
 
 ## Playbooks
-Intentory file location
-`$ /etc/ansible/hosts`
 
 ### Handlers
 
@@ -119,7 +119,7 @@ A role directory structure contains the directories below. Each directory must c
 Template file
 ```
 template_example.j2
---------------
+
 {{ variable_to_be_replaced }}
 Variable given as inline - {{ inline_variable }} -
 ```
@@ -179,9 +179,7 @@ common_directories:
 ## Useful Commands
 ### List group nodes
 
-
 `# ansible group-name --list-hosts`
-
 
 ## Modules
 ### Files
@@ -262,4 +260,4 @@ common_directories:
 
 * **Javier Baltar** - *Initial work* - [GitHub](https://github.com/JavierBaltar)
 
-## Licence
+
