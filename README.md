@@ -152,6 +152,24 @@ Intentory file location
 
 #### Slack
 
+#### Twilio
+
+```yaml
+# send an SMS to multiple phone numbers about the deployment
+# note: replace account_sid and auth_token values with your credentials
+# and you have to have the 'from_number' on your Twilio account
+- twilio:
+    msg: This server configuration is now complete.
+    account_sid: ACXXXXXXXXXXXXXXXXX
+    auth_token: ACXXXXXXXXXXXXXXXXX
+    from_number: +15553258899
+    to_number:
+      - +15551113232
+      - +12025551235
+      - +19735559010
+  delegate_to: localhost
+```
+
 ## Related
 
 * [Ansible Modules](https://docs.ansible.com/ansible/latest/modules/modules_by_category.html) - List of Ansible modules
