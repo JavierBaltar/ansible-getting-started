@@ -94,6 +94,29 @@ Intentory file location
 
 ## Templates
 
+```yaml
+- hosts: webservers
+  vars:
+    variable_to_be_replaced: 'value1'
+    inline_variable: 'value2'
+  tasks:
+    - name: Ansible using templates
+      template:
+        src: template_example.j2
+        dest: /userA/docs/personal_data.txt
+```
+Template file
+```
+template_example.j2
+--------------
+{{ variable_to_be_replaced }}
+Variable given as inline - {{ inline_variable }} -
+```
+Output
+```
+value1
+Variable given as inline - value2 -
+```
 
 ## Loops
 ### With_items
