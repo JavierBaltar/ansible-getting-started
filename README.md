@@ -155,18 +155,15 @@ Intentory file location
 #### Twilio
 
 ```yaml
-# send an SMS to multiple phone numbers about the deployment
-# note: replace account_sid and auth_token values with your credentials
-# and you have to have the 'from_number' on your Twilio account
+# Send an SMS to multiple phone numbers when the change is completed
 - twilio:
-    msg: This server configuration is now complete.
-    account_sid: ACXXXXXXXXXXXXXXXXX
-    auth_token: ACXXXXXXXXXXXXXXXXX
-    from_number: +15553258899
+    msg: The configuration change is completed!
+    account_sid: XXXXXXXXXXX
+    auth_token: XXXXXXXXXXX
+    from_number: +34XXXXXXXXX
     to_number:
-      - +15551113232
-      - +12025551235
-      - +19735559010
+      - +34XXXXXXXX1
+      - +34XXXXXXXX2
   delegate_to: localhost
 ```
 
