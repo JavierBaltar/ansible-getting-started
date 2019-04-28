@@ -111,6 +111,37 @@ Intentory file location
 
 ### With_nested
 
+Define variables
+```yaml
+users_with_items:
+  - name: "userA"
+    personal_directories:
+      - "old_files"
+      - "maps"
+      - "usb_files"
+  - name: "userB"
+    personal_directories:
+      - "old_files"
+      - "backup"
+      - "storage"
+
+common_directories:
+  - "docs"
+  - "media"
+ ```
+ 
+ ```yaml
+ - name: Create common users directories using
+  file:
+    dest: "/home/{{ item.0.name }}/{{ item.1 }}"
+    owner: "{{ item.0.name }}"
+    group: "{{ item.0.name }}"
+    state: directory
+  with_nested:
+    - "{{ users_with_items }}"
+    - "{{ common_directories }}"
+```
+
 ## Useful Commands
 ### List group nodes
 
