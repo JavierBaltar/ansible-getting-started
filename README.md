@@ -98,6 +98,17 @@ Intentory file location
 ## Loops
 ### With_items
 
+```yaml
+- name: Remove users from the system.
+  user:
+    name: "{{ item }}"
+    state: absent
+    remove: yes
+  with_items:
+    - userA
+    - userB
+```
+
 ### With_nested
 
 ## Useful Commands
