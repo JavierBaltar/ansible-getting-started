@@ -223,6 +223,20 @@ common_directories:
       dest: "/var/backups/
 ```
 
+#### Delete a File
+
+```bash
+#Delete the file /backups/tmp/nodelist.txt on all servers
+ansible all -b -m file -a "state=absent path=/backups/tmp/nodelist.txt"
+```
+
+#### Update a Line in File
+
+```bash
+#Update the line of text "MY_SETTING" to "BLUE" in /opt/configuration.txt on all servers
+ansible all -b -m lineinfile -a "regexp=MY_SETTING line=BLUE path=/opt/configuration.txt"
+```
+
 ### Notifications
 
 #### Slack
