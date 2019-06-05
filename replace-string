@@ -1,0 +1,8 @@
+- hosts: localhost
+  tasks:
+   - name: Replace string "fulcanelli.com" with "madrid.es"
+     replace:
+      path: /home/playbooks/library/file3.conf
+      regexp: '(.*)?fulcanelli\.com(.*)?$'
+      replace: '\1madrid.es\2'
+      backup: yes
