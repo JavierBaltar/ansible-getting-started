@@ -1,8 +1,8 @@
 ---
 
 # - hosts: asa-lab
-  gather_facts: false
-  connection: network_cli
+#  gather_facts: false
+#  connection: network_cli
 
   tasks:
   - name: SHOW ASA VERSION
