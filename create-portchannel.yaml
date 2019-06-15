@@ -1,6 +1,6 @@
 ---
 
--  hosts: nexus7000
+-  hosts: NXOS
    connection: local
    gather_facts: no
 
