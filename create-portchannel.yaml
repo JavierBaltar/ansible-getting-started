@@ -1,0 +1,24 @@
+---
+
+-  hosts: nexus7000
+   connection: local
+   gather_facts: no
+
+   vars:
+    nxos_provider:
+      username: "{{ username }}"
+      password: "{{ password }}"
+      transport: cli
+      port: 8181
+      timeout: 50
+      host: "{{ inventory_hostname }}"
+
+   tasks:
+
+    - name: Create portchannel
+      nxos_portchannel:
+        members: ['Ethernet1/1','Ethernet1/2']
+        mode: active
+        state: present
+        provider: "{{ nxos_provider }}"
+        
