@@ -1,0 +1,26 @@
+---
+- name: Enable NXOS Features
+  hosts: NXOS
+  connection: local
+  gather_facts: no
+
+  vars:
+    nxos_provider:
+      username: "{{ username }}"
+      password: "{{ password }}"
+      transport: cli
+      port: 8181
+      timeout: 50
+      host: "{{ inventory_hostname }}"
+  
+  tasks:
+    - name: diff the running-config against a provided config
+      nxos_config:
+        diff_against: running
+        provider: "{{ nxos_provider }}"
+        src: "{{ reference_configuration }}"
+      register: test_diff
+
+    - name: List changes
+      debug:
+        var: test_diff.updates    
