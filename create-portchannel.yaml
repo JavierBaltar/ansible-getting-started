@@ -1,6 +1,4 @@
 ---
-
--  hosts: NXOS
    connection: local
    gather_facts: no
 
