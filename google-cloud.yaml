@@ -26,7 +26,7 @@
         #metadata: "{{ instance_metadata }}"
         network: my-network
         subnetwork: public-subnet
-        external_ip: "{{ app_eip.address }}"
+        #external_ip: "{{ app_eip.address }}"
         service_account_email: "{{ service_account_email }}"
         credentials_file: "{{ credentials_file }}"
         #project_id: "{{ project_id }}"
