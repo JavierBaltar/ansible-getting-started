@@ -1,6 +1,6 @@
 ---
 
--hosts: NXOS
+-  hosts: NXOS
    connection: local
    gather_facts: no
 
