@@ -15,7 +15,7 @@
   tasks:
 
     - name: create and start the instance
-       gce:
+      gce:
         instance_names: app
         # zone: "{{ zone }}"
         machine_type: f1-micro
