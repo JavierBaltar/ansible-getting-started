@@ -1,0 +1,24 @@
+---
+- name: Enable NXOS Features
+  hosts: NXOS
+  connection: local
+  gather_facts: no
+
+  vars:
+    nxos_provider:
+      username: "{{ username }}"
+      password: "{{ password }}"
+      transport: cli
+      port: 8181
+      timeout: 50
+      host: "{{ inventory_hostname }}"
+  
+  tasks: 
+    - name: Enable features
+      nxos_feature:
+        feature: "{{ item }}"
+        state: enabled
+        provider: "{{ nxos_provider }}"
+      with_items:
+        - dhcp
+        - ospf
