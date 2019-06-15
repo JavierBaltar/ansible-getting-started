@@ -6,8 +6,8 @@
 
   vars:
     nxos_provider:
-    #  username: "{{ username }}"
-    #  password: "{{ password }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
       transport: cli
       port: 8181
       timeout: 50
