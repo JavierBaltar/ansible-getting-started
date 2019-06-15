@@ -15,10 +15,9 @@
 
    tasks:
 
-    - name: Create portchannel
+    - name: Create portchannels
       nxos_portchannel:
         members: ['Ethernet1/1','Ethernet1/2']
         mode: active
         state: present
         provider: "{{ nxos_provider }}"
-        
