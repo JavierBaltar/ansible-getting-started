@@ -15,10 +15,10 @@
   
   tasks: 
     - name: Enable features
-        nxos_feature:
-          feature: "{{ item }}"
-          state: enabled
-          provider: "{{ nxos_provider }}"
-        with_items:
-          - dhcp
-          - ospf
+      nxos_feature:
+        feature: "{{ item }}"
+        state: enabled
+        provider: "{{ nxos_provider }}"
+      with_items:
+        - dhcp
+        - ospf
