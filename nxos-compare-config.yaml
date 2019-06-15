@@ -14,6 +14,13 @@
       host: "{{ inventory_hostname }}"
   
   tasks:
+    - name: configurable backup path
+      nxos_config:
+        backup: yes
+        backup_options:
+        filename: backup.cfg
+        dir_path: /home/dev
+
     - name: diff the running-config against a provided config
       nxos_config:
         diff_against: running
