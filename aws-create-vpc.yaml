@@ -14,3 +14,10 @@
        state: present
        cidr_block: 10.0.5.0/24
       register: vpc_id
+
+
+    - name: Set fact VPC ID
+      set_stats:
+       data:
+        vpc_id: "{{ register.stdout }}"
+
