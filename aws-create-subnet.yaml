@@ -1,0 +1,24 @@
+---
+
+- name: Create instances ("{{ instances }}")
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  vars:
+    #service_account_email: XXXXXX
+    # credentials_file: /path/xxxx .json
+    #project_id: awx-javier-001
+    #machine_type: n1-standard-1
+    #image: centos-7
+
+  tasks:
+
+    - name: Create subnet for database servers
+      ec2_vpc_subnet:
+       state: present
+       vpc_id: vpc-123456
+       cidr: 10.0.1.16/28
+       resource_tags:
+         Name: Database Subnet
+      register: database_subnet
