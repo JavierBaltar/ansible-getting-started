@@ -27,7 +27,7 @@
         network: my-network
         subnetwork: public-subnet
         #external_ip: "{{ app_eip.address }}"
-        service_account_email: "{{ service_account_email }}"
+        service_account_email: ansible@awx-javier-001.iam.gserviceaccount.com
         #credentials_file: "{{ GCE_CREDENTIALS_FILE_PATH }}"
         #project_id: "{{ project_id }}"
       tags:
