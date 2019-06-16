@@ -28,7 +28,7 @@
         subnetwork: public-subnet
         #external_ip: "{{ app_eip.address }}"
         service_account_email: ansible@awx-javier-001.iam.gserviceaccount.com
-        credentials_file: awx-javier-001-9aa1236c2dd1.json
+        credentials_file: /home/centos/key.json
         #project_id: "{{ project_id }}"
       tags:
         - recipe2
