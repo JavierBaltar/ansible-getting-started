@@ -9,6 +9,7 @@
 
     - name: Create VPC  
       ec2_vpc_net:
+       name: my-vpc
        region: eu-west-1
        state: present
        cidr_block: 10.0.5.0/24
