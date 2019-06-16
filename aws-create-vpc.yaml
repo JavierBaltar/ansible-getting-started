@@ -14,7 +14,12 @@
        state: present
        cidr_block: 10.0.5.0/24
       register: create_vpc
-      
+
     - name: Check VPC ID
       debug:
        msg: "{{ create_vpc.vpc.id }}"
+
+    - name: Set VPC ID
+      set_stats:
+       data:
+        vpc_id: "{{ create_vpc.vpc.id }}" 
