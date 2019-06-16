@@ -13,7 +13,7 @@
        region: eu-west-1
        state: present
        cidr_block: 10.0.5.0/24
-      register: vpc
+      register: id
 
 
     - name: Set fact VPC ID
