@@ -11,8 +11,8 @@
       ec2_vpc_subnet:
        region: eu-west-1
        state: present
-       vpc_id: vpc-092f29084fe514363
-       cidr: 10.0.1.16/28
+       vpc_id: vpc-57def831
+       cidr: 172.31.48.0/20
        resource_tags:
          Name: ansible-training-javier
       register: subnet_id
