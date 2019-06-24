@@ -9,9 +9,9 @@
 
     - name: Create an incident
       snow_record:
-       username: "{{ service-now-username }}"
-       password: "{{ service-now-password }}"
-       instance: "{{ service-now-instance }}"
+       username: "{{ service_now_username }}"
+       password: "{{ service_now_password }}"
+       instance: "{{ service_now_instance }}"
        state: present
        data:
          short_description: "This is a test incident opened by Javier"
