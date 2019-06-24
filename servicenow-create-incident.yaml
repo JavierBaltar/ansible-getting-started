@@ -1,0 +1,21 @@
+---
+
+- name: Create Servicenow indicent
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  tasks:
+
+    - name: Create an incident
+      snow_record:
+       username: "{{ service-now-username }}"
+       password: "{{ service-now-password }}"
+       instance: "{{ service-now-instance }}"
+       state: present
+       data:
+         short_description: "This is a test incident opened by Javier"
+         severity: 2
+         priority: 1
+      register: new_incident
+
