@@ -1,4 +1,5 @@
 ---
+
 - name: Create a k8s namespace  
   kubernetes.core.k8s:    
     state: present    
@@ -7,3 +8,10 @@
       kind: Namespace      
       metadata:        
         name: demo 
+
+  vars:
+    #service_account_email: XXXXXX
+    # credentials_file: /path/xxxx .json
+    project_id: awx-javier-001
+    #machine_type: n1-standard-1
+    #image: centos-7
